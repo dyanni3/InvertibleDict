@@ -14,6 +14,13 @@ inv_dict.update({4:9})
 2. Swap the keys and values easily
 
 ```
+d = InvertibleDict({1:[1,2,3], 2:[4,5,6]})
+print(d, ~d)
+```
+
+`{1: (1, 2, 3), 2: (4, 5, 6)} {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2}`
+
+```
 swapped = ~inv_dict
 original = ~(~inv_dict)
 assert original == inv_dict
